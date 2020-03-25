@@ -45,8 +45,9 @@ Build the source
 $ yarn build
 ```
 
-#Sponsors
-My BTC wallet in case you want to support me:
+## Sponsors
+
+My BTC wallet in case you want to support the project:
 bc1qjnxp6r7pvny5h5l75493whna8trl0dxjvxwc84
 
 
