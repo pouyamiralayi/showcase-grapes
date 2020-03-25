@@ -1,3 +1,22 @@
+.sp-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+.sp-column {
+    min-height: 75px;
+    flex-grow: 1;
+    flex-basis: 100%;
+    overflow: auto;
+}
+
+.editor-clm {
+    display: flex;
+    flex-direction: column;
+}
+
 .gjs-cv-canvas {
     background-color: rgba(0, 0, 0, 0.09);
 
@@ -42,20 +61,30 @@
     top: 0px;
 }
 
-/*#sidebar-inner-1{*/
-/*  position: absolute;*/
-/*  top: 0px;*/
-/*  bottom: 0px;*/
-/*  right: 0px;*/
-/*  height: calc(100%);*/
-/*}*/
+#sidebar-inner-1 {
+    /*width:258px*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*bottom: 0px;*/
+    /*right: 0px;*/
+    /*height: calc(100%);*/
+}
+
+#sidebar-inner-4 {
+    /*width:270px;*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*bottom: 0px;*/
+    /*right: 0px;*/
+    /*height: calc(100%);*/
+}
 
 #sidebar-inner-2 {
     transform-origin: left;
     position: absolute;
     top: 0px;
     bottom: 0px;
-    width: 228px;
+    width: 270px;
     transform: translateX(-270px);
     height: calc(100%);
 }
@@ -65,19 +94,32 @@
     position: absolute;
     top: 0px;
     bottom: 0px;
-    width: 228px;
+    width: 270px;
     transform: translateX(-270px);
     height: calc(100%);
 }
 
-#sidebar-forms-designs {
+#sidebar-forms-designs,
+#sidebar-ecommerces-designs,
+#sidebar-timeline-designs,
+#sidebar-gallery-designs,
+#sidebar-video-designs,
+#sidebar-audio-designs,
+#sidebar-accordion-designs,
+#sidebar-map-designs,
+#sidebar-pricing-designs,
+#sidebar-customers-designs,
+#sidebar-content-designs,
+#sidebar-cover-designs,
+#sidebar-navbar-designs,
+#sidebar-footer-designs {
     transform-origin: right;
     position: absolute;
     top: 0px;
     bottom: 0px;
     /*right: -270px;*/
     width: 470px;
-    transform: translateX(-470px);
+    transform: translateX(-490px);
     height: calc(100%);
 }
 
@@ -87,7 +129,20 @@
 
 .sidebar-collapsed #sidebar-inner-2.visible,
 .sidebar-collapsed #sidebar-inner-3.visible,
-.sidebar-collapsed #sidebar-forms-designs.visible {
+.sidebar-collapsed #sidebar-forms-designs.visible,
+.sidebar-collapsed #sidebar-ecommerces-designs.visible,
+.sidebar-collapsed #sidebar-timeline-designs.visible,
+.sidebar-collapsed #sidebar-gallery-designs.visible,
+.sidebar-collapsed #sidebar-video-designs.visible,
+.sidebar-collapsed #sidebar-audio-designs.visible,
+.sidebar-collapsed #sidebar-accordion-designs.visible,
+.sidebar-collapsed #sidebar-map-designs.visible,
+.sidebar-collapsed #sidebar-pricing-designs.visible,
+.sidebar-collapsed #sidebar-customers-designs.visible,
+.sidebar-collapsed #sidebar-content-designs.visible,
+.sidebar-collapsed #sidebar-cover-designs.visible,
+.sidebar-collapsed #sidebar-navbar-designs.visible,
+.sidebar-collapsed #sidebar-footer-designs.visible {
     transform: translateX(0px);
 }
 
@@ -96,9 +151,11 @@
     transform: translateX(0px);
 }
 
-#sidebar-forms-designs.visible {
+#sidebar-forms-designs.visible,
+#sidebar-ecommerces-designs.visible {
     transform: translateX(0px);
 }
+
 
 #sidebar-inner-2 #blocks-mgr {
     padding: 0px;

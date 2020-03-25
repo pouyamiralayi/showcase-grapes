@@ -1,0 +1,23 @@
+{
+  "name": "assembekov-grapes",
+  "version": "1.0.0",
+  "description": "Assembekov Grapes",
+  "main": "dist/assembekov-grapes.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pouyamiralayi/assembekov-grapes.git"
+  },
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build",
+    "bump": "npm version patch -m 'Bump v%s'"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin"
+  ],
+  "devDependencies": {
+    "grapesjs-cli": "^1.0.12"
+  },
+  "license": "MIT"
+}
