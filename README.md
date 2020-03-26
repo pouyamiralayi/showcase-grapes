@@ -8,6 +8,8 @@ This project is a show case of what can be achieved using [Grapesjs](https://git
 
 [Material Design Bootstrap](https://mdbootstrap.com/) is used for design blocks.
 
+![](demo.gif)
+
 ### Design Blocks
 - Forms
 - E-commerce
