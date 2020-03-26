@@ -18,6 +18,8 @@ This project is a show case of what can be achieved using [Grapesjs](https://git
 - Accordion
 - and few more coming soon...
 
+## Multi Page Support
+
 ## Development
 
 Clone the repository
