@@ -1,3 +1,23 @@
+localStorage.setItem('current', 'page0')
+localStorage.setItem('pages', JSON.stringify({
+    'page0': {
+        title: null,
+        id: 'page0',
+        components: [],
+        style: []
+    }
+}))
+//     window.page_manager = {
+//     current: 0,
+//     pages: [
+//         {
+//             title:null,
+//             id:0,
+//             components: [],
+//             style: []
+//         },
+//     ]
+// }
 const CodeMirror_config = {
     export: {
         readOnly: 1,
@@ -60,7 +80,17 @@ window.editor = grapesjs.init({
         }, {
             name: 'Typography',
             open: false,
-            buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height', 'text-align', 'text-shadow']
+            buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height', 'text-align', 'text-shadow'],
+            properties: [
+                {
+                    property: 'font-family',
+                    name: 'Font',
+                    list: [
+                        {name: 'Arial', value: 'Arial, Helvetica, sans-serif'},
+                        {name: 'Vazir', value: 'Vazir'},
+                    ]
+                }
+            ],
         }, {
             name: 'Decorations',
             open: false,
@@ -9250,6 +9280,7 @@ editor.Commands.add('hide-map', {
         hideMapDesigns()
     }
 });
+
 editor.Commands.add('set-device-desktop', {
     run: editor => editor.setDevice('Desktop')
 });
@@ -9265,6 +9296,7 @@ editor.on('component:selected', (arguments) => {
 })
 
 window.addEventListener('load', () => {
+    $('#pages-mgr').dynamiclist()
     $('#desktop-view').on('click', (event) => {
         editor.Commands.run('set-device-desktop');
     })

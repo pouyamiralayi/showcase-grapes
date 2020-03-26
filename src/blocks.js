@@ -31,10 +31,10 @@ export default (editor, opts = {}) => {
         label: 'Accordion',
         content: {type: 'ACCORDION'}
     })
-  bm.add('music', {
-    label: 'Music',
-    content: {type: 'MUSIC'}
-  })
+  // bm.add('music', {
+  //   label: 'Music',
+  //   content: {type: 'MUSIC'}
+  // })
     // bm.add('MY-BLOCK', {
     //   label: 'My block',
     //   content: { type: 'MY-COMPONENT' },
