@@ -307,6 +307,304 @@ export default (editor, opts = {}) => {
 //         }
 //     })
 
+
+    const defaultType = domc.getType('default').model;
+    const showFormsCmd = 'show-forms';
+    const showEcommercesCmd = 'show-ecommerces';
+    const showTimelineCmd = 'show-timeline';
+    const showGalleryCmd = 'show-gallery';
+    const showVideoCmd = 'show-video';
+    const showMapCmd = 'show-map';
+    const showFormsIcon = `
+                 <svg viewBox="0 0 24 24">
+                    <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z">
+                    </path>
+                  </svg>
+`;
+
+    domc.addType('FORM', {
+        model: {
+            /*adding a button for showing forms-designs*/
+            initToolbar() {
+                defaultType.prototype.initToolbar.apply(this, arguments);
+                window.selected_form_component = this;
+                const tb = this.get('toolbar');
+                const tbExists = tb.some(item => item.command === showFormsCmd);
+
+                if (!tbExists) {
+                    tb.unshift({
+                        command: showFormsCmd,
+                        label: showFormsIcon,
+                    });
+                    this.set('toolbar', tb);
+                }
+            },
+            defaults: {
+                style: {
+                    margin: '25px',
+                    padding: '25px',
+                    'text-align': 'center',
+                },
+                components: 'Choose your Form Design from the Left Menu!'
+            }
+        }
+    })
+    domc.addType('ECOMMERCE', {
+        model: {
+            /*adding a button for showing forms-designs*/
+            initToolbar() {
+                defaultType.prototype.initToolbar.apply(this, arguments);
+                window.selected_form_component = this;
+                const tb = this.get('toolbar');
+                const tbExists = tb.some(item => item.command === showEcommercesCmd);
+
+                if (!tbExists) {
+                    tb.unshift({
+                        command: showEcommercesCmd,
+                        label: showFormsIcon,
+                    });
+                    this.set('toolbar', tb);
+                }
+            },
+            defaults: {
+                style: {
+                    margin: '25px',
+                    padding: '25px',
+                    'text-align': 'center',
+                },
+                components: 'Choose your E-commerce Design from the Left Menu!'
+            }
+        }
+    })
+    domc.addType('TIMELINE', {
+        model: {
+            /*adding a button for showing forms-designs*/
+            initToolbar() {
+                defaultType.prototype.initToolbar.apply(this, arguments);
+                window.selected_timeline_component = this;
+                const tb = this.get('toolbar');
+                const tbExists = tb.some(item => item.command === showTimelineCmd);
+
+                if (!tbExists) {
+                    tb.unshift({
+                        command: showTimelineCmd,
+                        label: showFormsIcon,
+                    });
+                    this.set('toolbar', tb);
+                }
+            },
+            defaults: {
+                style: {
+                    margin: '25px',
+                    padding: '25px',
+                    'text-align': 'center',
+                },
+                components: 'Choose your Timeline Design from the Left Menu!'
+            }
+        }
+    })
+    editor.TraitManager.addType('new-slide', {
+        eventCapture: ['click'],
+        noLabel: true,
+        templateInput: `
+            <div class="text-center w-100 py-2">
+                <div data-input></div>
+            </div>`,
+        // Return a simple HTML string or an HTML element
+        createInput({trait}) {
+            // Here we can decide to use properties from the trait
+            // const traitOpts = trait.get('options') || [];
+            // const options = traitOpts.lenght ? traitOpts : [
+            //     { id: 'url', name: 'URL' },
+            //     { id: 'email', name: 'Email' },
+            // ];
+
+            // Create a new element container add some content
+            const el = $('<button type="button" class="btn-success btn text-white">New Slide</button>',)[0]
+            // const el = document.createElement('div');
+            // el.innerHTML = `
+            //     <button type="button" class="btn btn-primary text-white">New Slide</button>
+            // `
+            //         el.innerHTML = `
+            //   <select class="href-next__type">
+            //     ${options.map(opt =>
+            //             `<option value="${opt.id}">${opt.name}</option>`)
+            //             .join('')}
+            //   </select>
+            //   <div class="href-next__url-inputs">
+            //     <input class="href-next__url" placeholder="Insert URL"/>
+            //   </div>
+            //   <div class="href-next__email-inputs">
+            //     <input class="href-next__email" placeholder="Insert email"/>
+            //     <input class="href-next__email-subject" placeholder="Insert subject"/>
+            //   </div>
+            // `;
+
+            // Let's make our content alive
+            // const inputsUrl = el.querySelector('.href-next__url-inputs');
+            // const inputsEmail = el.querySelector('.href-next__email-inputs');
+            // const inputType = el.querySelector('.href-next__type');
+            // inputType.addEventListener('change', ev => {
+            //     switch (ev.target.value) {
+            //         case 'url':
+            //             inputsUrl.style.display = '';
+            //             inputsEmail.style.display = 'none';
+            //             break;
+            //         case 'email':
+            //             inputsUrl.style.display = 'none';
+            //             inputsEmail.style.display = '';
+            //             break;
+            //     }
+            // });
+
+            return el;
+        },
+
+        // Update the component based element changes
+        onEvent({elInput, component}) {
+            const wrapper = component.find('div > .carousel-inner')[0]
+            wrapper && wrapper.append(`
+                <div class="carousel-item">
+                  <img class="d-block w-100" src=""
+                    alt="Third slide">
+                </div>
+            `)
+            const controlsWrapper = component.find('.carousel-indicators')[0]
+            const controlsLength = controlsWrapper && controlsWrapper.find('li').length
+            controlsLength && controlsWrapper.append(`
+                <li data-target="#carousel-example-1z" data-slide-to="${controlsLength + 1}"></li>
+            `)
+            // `elInput` is the result HTMLElement you get from `createInput`
+            // const inputType = elInput.querySelector('.href-next__type');
+            // let href = '';
+
+            // switch (inputType.value) {
+            //     case 'url':
+            //         const valUrl = elInput.querySelector('.href-next__url').value;
+            //         href = valUrl;
+            //         break;
+            //     case 'email':
+            //         const valEmail = elInput.querySelector('.href-next__email').value;
+            //         const valSubj = elInput.querySelector('.href-next__email-subject').value;
+            //         href = `mailto:${valEmail}${valSubj ? `?subject=${valSubj}` : ''}`;
+            //         break;
+            // }
+
+            // component.addAttributes({ href });
+        },
+
+        onUpdate({elInput, component}) {
+            // const href = component.getAttributes().href || '';
+            // const inputType = elInput.querySelector('.href-next__type');
+            // let type = 'url';
+            //
+            // if (href.indexOf('mailto:') === 0) {
+            //     const inputEmail = elInput.querySelector('.href-next__email');
+            //     const inputSubject = elInput.querySelector('.href-next__email-subject');
+            //     const mailTo = href.replace('mailto:', '').split('?');
+            //     const email = mailTo[0];
+            //     const params = (mailTo[1] || '').split('&').reduce((acc, item) => {
+            //         const items = item.split('=');
+            //         acc[items[0]] = items[1];
+            //         return acc;
+            //     }, {});
+            //     type = 'email';
+            //
+            //     inputEmail.value = email || '';
+            //     inputSubject.value = params.subject || '';
+            // } else {
+            //     elInput.querySelector('.href-next__url').value = href;
+            // }
+            //
+            // inputType.value = type;
+            // inputType.dispatchEvent(new CustomEvent('change'));
+        },
+    });
+    domc.addType('GALLERY', {
+        model: {
+            /*adding a button for showing forms-designs*/
+            initToolbar() {
+                defaultType.prototype.initToolbar.apply(this, arguments);
+                window.selected_timeline_component = this;
+                const tb = this.get('toolbar');
+                const tbExists = tb.some(item => item.command === showGalleryCmd);
+
+                if (!tbExists) {
+                    tb.unshift({
+                        command: showGalleryCmd,
+                        label: showFormsIcon,
+                    });
+                    this.set('toolbar', tb);
+                }
+            },
+            defaults: {
+                traits: [{
+                    type: 'new-slide',
+                }],
+                style: {
+                    margin: '25px',
+                    padding: '25px',
+                    'text-align': 'center',
+                },
+                components: 'Choose your Gallery Design from the Left Menu!'
+            }
+        }
+    })
+    domc.addType('VIDEO', {
+        model: {
+            /*adding a button for showing forms-designs*/
+            initToolbar() {
+                defaultType.prototype.initToolbar.apply(this, arguments);
+                window.selected_timeline_component = this;
+                const tb = this.get('toolbar');
+                const tbExists = tb.some(item => item.command === showVideoCmd);
+
+                if (!tbExists) {
+                    tb.unshift({
+                        command: showVideoCmd,
+                        label: showFormsIcon,
+                    });
+                    this.set('toolbar', tb);
+                }
+            },
+            defaults: {
+                src: '',
+                style: {
+                    margin: '25px',
+                    padding: '25px',
+                    'text-align': 'center',
+                },
+                components: 'Choose your Video Design from the Left Menu!'
+            }
+        }
+    })
+    domc.addType('MAP', {
+        model: {
+            /*adding a button for showing forms-designs*/
+            initToolbar() {
+                defaultType.prototype.initToolbar.apply(this, arguments);
+                window.selected_timeline_component = this;
+                const tb = this.get('toolbar');
+                const tbExists = tb.some(item => item.command === showMapCmd);
+
+                if (!tbExists) {
+                    tb.unshift({
+                        command: showMapCmd,
+                        label: showFormsIcon,
+                    });
+                    this.set('toolbar', tb);
+                }
+            },
+            defaults: {
+                style: {
+                    margin: '25px',
+                    padding: '25px',
+                    'text-align': 'center',
+                },
+                components: 'Choose your Map Design from the Left Menu!'
+            }
+        }
+    })
     domc.addType('ACCORDION', {
         model: {
             defaults: {
@@ -407,185 +705,6 @@ export default (editor, opts = {}) => {
                 script: function () {
                 }
 
-            }
-        }
-    })
-
-    const defaultType = domc.getType('default').model;
-    const showFormsCmd = 'show-forms';
-    const showEcommercesCmd = 'show-ecommerces';
-    const showTimelineCmd = 'show-timeline';
-    const showGalleryCmd = 'show-gallery';
-    const showVideoCmd = 'show-video';
-    const showMapCmd = 'show-map';
-    const showFormsIcon = `
-                 <svg viewBox="0 0 24 24">
-                    <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z">
-                    </path>
-                  </svg>
-`;
-
-    domc.addType('FORM', {
-        model: {
-            /*adding a button for showing forms-designs*/
-            initToolbar() {
-                defaultType.prototype.initToolbar.apply(this, arguments);
-                window.selected_form_component = this;
-                const tb = this.get('toolbar');
-                const tbExists = tb.some(item => item.command === showFormsCmd);
-
-                if (!tbExists) {
-                    tb.unshift({
-                        command: showFormsCmd,
-                        label: showFormsIcon,
-                    });
-                    this.set('toolbar', tb);
-                }
-            },
-            defaults: {
-                style: {
-                    margin: '25px',
-                    padding: '25px',
-                    'text-align': 'center',
-                },
-                components: 'Choose your Form Design from the Left Menu!'
-            }
-        }
-    })
-    domc.addType('ECOMMERCE', {
-        model: {
-            /*adding a button for showing forms-designs*/
-            initToolbar() {
-                defaultType.prototype.initToolbar.apply(this, arguments);
-                window.selected_form_component = this;
-                const tb = this.get('toolbar');
-                const tbExists = tb.some(item => item.command === showEcommercesCmd);
-
-                if (!tbExists) {
-                    tb.unshift({
-                        command: showEcommercesCmd,
-                        label: showFormsIcon,
-                    });
-                    this.set('toolbar', tb);
-                }
-            },
-            defaults: {
-                style: {
-                    margin: '25px',
-                    padding: '25px',
-                    'text-align': 'center',
-                },
-                components: 'Choose your E-commerce Design from the Left Menu!'
-            }
-        }
-    })
-    domc.addType('TIMELINE', {
-        model: {
-            /*adding a button for showing forms-designs*/
-            initToolbar() {
-                defaultType.prototype.initToolbar.apply(this, arguments);
-                window.selected_timeline_component = this;
-                const tb = this.get('toolbar');
-                const tbExists = tb.some(item => item.command === showTimelineCmd);
-
-                if (!tbExists) {
-                    tb.unshift({
-                        command: showTimelineCmd,
-                        label: showFormsIcon,
-                    });
-                    this.set('toolbar', tb);
-                }
-            },
-            defaults: {
-                style: {
-                    margin: '25px',
-                    padding: '25px',
-                    'text-align': 'center',
-                },
-                components: 'Choose your Timeline Design from the Left Menu!'
-            }
-        }
-    })
-    domc.addType('GALLERY', {
-        model: {
-            /*adding a button for showing forms-designs*/
-            initToolbar() {
-                defaultType.prototype.initToolbar.apply(this, arguments);
-                window.selected_timeline_component = this;
-                const tb = this.get('toolbar');
-                const tbExists = tb.some(item => item.command === showGalleryCmd);
-
-                if (!tbExists) {
-                    tb.unshift({
-                        command: showGalleryCmd,
-                        label: showFormsIcon,
-                    });
-                    this.set('toolbar', tb);
-                }
-            },
-            defaults: {
-                style: {
-                    margin: '25px',
-                    padding: '25px',
-                    'text-align': 'center',
-                },
-                components: 'Choose your Gallery Design from the Left Menu!'
-            }
-        }
-    })
-    domc.addType('VIDEO', {
-        model: {
-            /*adding a button for showing forms-designs*/
-            initToolbar() {
-                defaultType.prototype.initToolbar.apply(this, arguments);
-                window.selected_timeline_component = this;
-                const tb = this.get('toolbar');
-                const tbExists = tb.some(item => item.command === showVideoCmd);
-
-                if (!tbExists) {
-                    tb.unshift({
-                        command: showVideoCmd,
-                        label: showFormsIcon,
-                    });
-                    this.set('toolbar', tb);
-                }
-            },
-            defaults: {
-                src: '',
-                style: {
-                    margin: '25px',
-                    padding: '25px',
-                    'text-align': 'center',
-                },
-                components: 'Choose your Video Design from the Left Menu!'
-            }
-        }
-    })
-
-    domc.addType('MAP', {
-        model: {
-            /*adding a button for showing forms-designs*/
-            initToolbar() {
-                defaultType.prototype.initToolbar.apply(this, arguments);
-                window.selected_timeline_component = this;
-                const tb = this.get('toolbar');
-                const tbExists = tb.some(item => item.command === showMapCmd);
-
-                if (!tbExists) {
-                    tb.unshift({
-                        command: showMapCmd,
-                        label: showFormsIcon,
-                    });
-                    this.set('toolbar', tb);
-                }
-            },
-            defaults: {
-                style: {
-                    margin: '25px',
-                    padding: '25px',
-                    'text-align': 'center',
-                },
-                components: 'Choose your Map Design from the Left Menu!'
             }
         }
     })

@@ -7478,66 +7478,66 @@ const initGalleryDesigns = () => {
             `
             <div class="container my-5">
 
-  <!--Section: Content-->
-  <section class="text-center dark-grey-text mb-5">
-    
-    <h3 class="font-weight-bold pb-5 text-center">Gallery</h3>
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <!--Carousel Wrapper-->
-        <div id="carousel-example-1z" class="carousel slide" data-ride="carousel">
-          <!--Indicators-->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-            <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-          </ol>
-          <!--/.Indicators-->
-          <!--Slides-->
-          <div class="carousel-inner" role="listbox">
-            <!--First slide-->
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/12-col/img%20(10).jpg"
-                alt="First slide">
-            </div>
-            <!--/First slide-->
-            <!--Second slide-->
-            <div class="carousel-item">
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/12-col/img%20(11).jpg"
-                alt="Second slide">
-            </div>
-            <!--/Second slide-->
-            <!--Third slide-->
-            <div class="carousel-item">
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/12-col/img%20(12).jpg"
-                alt="Third slide">
-            </div>
-            <!--/Third slide-->
-          </div>
-          <!--/.Slides-->
-          <!--Controls-->
-          <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-          <!--/.Controls-->
-        </div>
-        <!--/.Carousel Wrapper-->
-
-      </div>
-    </div>
-
-  </section>
-  <!--Section: Content-->
-
-
-</div>
+                  <!--Section: Content-->
+                  <section class="text-center dark-grey-text mb-5">
+                    
+                    <h3 class="font-weight-bold pb-5 text-center">Gallery</h3>
+                
+                    <div class="row">
+                      <div class="col-md-12">
+                
+                        <!--Carousel Wrapper-->
+                        <div id="carousel-example-1z" class="carousel slide" data-ride="carousel">
+                          <!--Indicators-->
+                          <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                          </ol>
+                          <!--/.Indicators-->
+                          <!--Slides-->
+                          <div class="carousel-inner" role="listbox">
+                            <!--First slide-->
+                            <div class="carousel-item active">
+                              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/12-col/img%20(10).jpg"
+                                alt="First slide">
+                            </div>
+                            <!--/First slide-->
+                            <!--Second slide-->
+                            <div class="carousel-item">
+                              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/12-col/img%20(11).jpg"
+                                alt="Second slide">
+                            </div>
+                            <!--/Second slide-->
+                            <!--Third slide-->
+                            <div class="carousel-item">
+                              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Architecture/12-col/img%20(12).jpg"
+                                alt="Third slide">
+                            </div>
+                            <!--/Third slide-->
+                          </div>
+                          <!--/.Slides-->
+                          <!--Controls-->
+                          <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                          <!--/.Controls-->
+                        </div>
+                        <!--/.Carousel Wrapper-->
+                
+                      </div>
+                    </div>
+                
+                  </section>
+                  <!--Section: Content-->
+                
+                
+                </div>
             `
         ) : null
         if (window.selected_gallery_component) {
@@ -7565,106 +7565,104 @@ const initGalleryDesigns = () => {
             `
             <div class="container my-5">
 
+                  <!--Section: Content-->
+                  <section class="text-center dark-grey-text">
+                    
+                    <style>
+                      .carousel-multi-item.v-2 .carousel-inner .carousel-item.active,
+                      .carousel-multi-item.v-2 .carousel-item-next,
+                      .carousel-multi-item.v-2 .carousel-item-prev {
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex; }
+                      .carousel-multi-item.v-2 .carousel-item-right.active,
+                      .carousel-multi-item.v-2 .carousel-item-next {
+                        -webkit-transform: translateX(50%);
+                        -ms-transform: translateX(50%);
+                        transform: translateX(50%); }
+                      .carousel-multi-item.v-2 .carousel-item-left.active,
+                      .carousel-multi-item.v-2 .carousel-item-prev {
+                        -webkit-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
+                        transform: translateX(-50%); }
+                      .carousel-multi-item.v-2 .carousel-item-right,
+                      .carousel-multi-item.v-2 .carousel-item-left {
+                        -webkit-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        transform: translateX(0); }
+                    </style>
+                    
+                    <h3 class="font-weight-bold pb-4 mb-0 text-center">Gallery</h3>
+                
+                    <div class="row">
+                      <div class="col-md-12">
+                
+                        <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
+                
+                          <!--Controls-->
+                          <div class="controls-top">
+                            <a class="btn-floating bg-transparent z-depth-0 m-3 btn-lg" href="#carousel-example-multi" data-slide="prev"><i class="dark-grey-text fas fa-chevron-left"></i></a>
+                            <a class="btn-floating bg-transparent z-depth-0 m-3 btn-lg" href="#carousel-example-multi" data-slide="next"><i class="dark-grey-text fas fa-chevron-right"></i></a>
+                          </div>
+                          <!--/.Controls-->
+                
+                          <div class="carousel-inner mt-4" role="listbox">
+                
+                            <div class="carousel-item active">
+                              <div class="col-12 col-md-6 mb-4 mx-auto">
+                                <div class="view rounded z-depth-1-half">
+                                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(150).jpg" class="img-fluid rounded" alt="Sample image">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="col-12 col-md-6 mb-4 mx-auto">
+                                <div class="view rounded z-depth-1-half">
+                                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(146).jpg" class="img-fluid rounded" alt="Sample image">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="col-12 col-md-6 mb-4 mx-auto">
+                                <div class="view rounded z-depth-1-half">
+                                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(138).jpg" class="img-fluid rounded" alt="Sample image">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="col-12 col-md-6 mx-auto">
+                                <div class="view rounded z-depth-1-half">
+                                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(133).jpg" class="img-fluid rounded" alt="Sample image">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="col-12 col-md-6 mb-4 mx-auto">
+                                <div class="view rounded z-depth-1-half">
+                                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(148).jpg" class="img-fluid rounded" alt="Sample image">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="carousel-item">
+                              <div class="col-12 col-md-6 mb-4 mx-auto">
+                                <div class="view rounded z-depth-1-half">
+                                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(131).jpg" class="img-fluid rounded" alt="Sample image">
+                                </div>
+                              </div>
+                            </div>
+                
+                          </div>
+                
+                        </div>
+                
+                      </div>
+                    </div>
+                
+                  </section>
+                  <!--Section: Content-->
 
-  <!--Section: Content-->
-  <section class="text-center dark-grey-text">
-    
-    <style>
-      .carousel-multi-item.v-2 .carousel-inner .carousel-item.active,
-      .carousel-multi-item.v-2 .carousel-item-next,
-      .carousel-multi-item.v-2 .carousel-item-prev {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex; }
-      .carousel-multi-item.v-2 .carousel-item-right.active,
-      .carousel-multi-item.v-2 .carousel-item-next {
-        -webkit-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-        transform: translateX(50%); }
-      .carousel-multi-item.v-2 .carousel-item-left.active,
-      .carousel-multi-item.v-2 .carousel-item-prev {
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%); }
-      .carousel-multi-item.v-2 .carousel-item-right,
-      .carousel-multi-item.v-2 .carousel-item-left {
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0); }
-    </style>
-    
-    <h3 class="font-weight-bold pb-4 mb-0 text-center">Gallery</h3>
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
-
-          <!--Controls-->
-          <div class="controls-top">
-            <a class="btn-floating bg-transparent z-depth-0 m-3 btn-lg" href="#carousel-example-multi" data-slide="prev"><i class="dark-grey-text fas fa-chevron-left"></i></a>
-            <a class="btn-floating bg-transparent z-depth-0 m-3 btn-lg" href="#carousel-example-multi" data-slide="next"><i class="dark-grey-text fas fa-chevron-right"></i></a>
-          </div>
-          <!--/.Controls-->
-
-          <div class="carousel-inner mt-4" role="listbox">
-
-            <div class="carousel-item active">
-              <div class="col-12 col-md-6 mb-4 mx-auto">
-                <div class="view rounded z-depth-1-half">
-                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(150).jpg" class="img-fluid rounded" alt="Sample image">
-                </div>
-              </div>
             </div>
-            <div class="carousel-item">
-              <div class="col-12 col-md-6 mb-4 mx-auto">
-                <div class="view rounded z-depth-1-half">
-                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(146).jpg" class="img-fluid rounded" alt="Sample image">
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12 col-md-6 mb-4 mx-auto">
-                <div class="view rounded z-depth-1-half">
-                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(138).jpg" class="img-fluid rounded" alt="Sample image">
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12 col-md-6 mx-auto">
-                <div class="view rounded z-depth-1-half">
-                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(133).jpg" class="img-fluid rounded" alt="Sample image">
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12 col-md-6 mb-4 mx-auto">
-                <div class="view rounded z-depth-1-half">
-                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(148).jpg" class="img-fluid rounded" alt="Sample image">
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12 col-md-6 mb-4 mx-auto">
-                <div class="view rounded z-depth-1-half">
-                  <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(131).jpg" class="img-fluid rounded" alt="Sample image">
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-  </section>
-  <!--Section: Content-->
-
-
-</div>
             `
         ) : null
         if (window.selected_gallery_component) {
@@ -7718,48 +7716,48 @@ const initVideoDesigns = () => {
             `
             <div class="container-fluid mt-3 mb-5">
 
-  <!-- Section -->
-  <section class="bg-primary z-depth-1">
-
-    <!-- Modal -->
-    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-            <iframe id="player" class="embed-responsive-item" 
-            src="https://www.youtube.com/embed/7MUISDJ5ZZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row no-gutters">
-
-      <div class="col-lg-6 order-md-2">
-        <div class="view">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Slides/img%20(152).jpg" alt="Video title">
-          <div class="mask flex-center rgba-black-light">
-            <a id="play" class="btn-floating btn-danger btn-lg" data-toggle="modal" data-target="#modal1"><i class="fas fa-play"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 mx-auto d-flex align-items-center text-white">
-        <div class="px-4 py-4 py-lg-0">
-          <h3 class="font-weight-normal mb-4">Give a Fresh Design to Your MDB</h3>
-          <p class="mb-0">Fresh fellow even the whole is work outcome them. They original on mountains, drew the
-            support time. The of to graduate. Into to is the to she at return understand every in there transmitting
-            you've he the was and in finger.</p>
-        </div>
-      </div>
-
-    </div>
-    
-  </section>
-  <!-- Section -->
-
-</div>
+                  <!-- Section -->
+                  <section class="bg-primary z-depth-1">
+                
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe id="player" class="embed-responsive-item" 
+                            src="https://www.youtube.com/embed/7MUISDJ5ZZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <div class="row no-gutters">
+                
+                      <div class="col-lg-6 order-md-2">
+                        <div class="view">
+                          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Slides/img%20(152).jpg" alt="Video title">
+                          <div class="mask flex-center rgba-black-light">
+                            <a id="play" class="btn-floating btn-danger btn-lg" data-toggle="modal" data-target="#modal1"><i class="fas fa-play"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                
+                      <div class="col-lg-6 mx-auto d-flex align-items-center text-white">
+                        <div class="px-4 py-4 py-lg-0">
+                          <h3 class="font-weight-normal mb-4">Give a Fresh Design to Your MDB</h3>
+                          <p class="mb-0">Fresh fellow even the whole is work outcome them. They original on mountains, drew the
+                            support time. The of to graduate. Into to is the to she at return understand every in there transmitting
+                            you've he the was and in finger.</p>
+                        </div>
+                      </div>
+                
+                    </div>
+                    
+                  </section>
+                  <!-- Section -->
+                
+                </div>
             `
         ) : null
         if (window.selected_video_component) {
@@ -7795,44 +7793,44 @@ const initVideoDesigns = () => {
             <div class="container z-depth-1 my-5 py-5">
   
 
-  <!-- Section: Block Content -->
-  <section>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-            <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/7MUISDJ5ZZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">video</h6>
-    <h3 class="font-weight-bold text-center dark-grey-text pb-2">Explore</h3>
-    <hr class="w-header my-4">
-    <p class="lead text-center text-muted pt-2 mb-5">Explore the best MDB template in the market in a short 1-minute video.</p>
-
-    <div class="row">
-      <div class="col-md-8 mx-auto mb-4">
-
-          <div class="view z-depth-1 rounded">
-            <img class="rounded img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(29).jpg" alt="Video title">
-            <div class="mask flex-center rgba-white-light">
-              <a id="play" class="btn-floating btn-danger btn-lg" data-toggle="modal" data-target="#modal1"><i class="fas fa-play"></i></a>
-            </div>
-          </div>
-
-      </div>
-    </div>
-
-  </section>
-  <!-- Section: Block Content -->
-
-  
-</div>
+                      <!-- Section: Block Content -->
+                      <section>
+                    
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                          aria-hidden="true">
+                          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/7MUISDJ5ZZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">video</h6>
+                        <h3 class="font-weight-bold text-center dark-grey-text pb-2">Explore</h3>
+                        <hr class="w-header my-4">
+                        <p class="lead text-center text-muted pt-2 mb-5">Explore the best MDB template in the market in a short 1-minute video.</p>
+                    
+                        <div class="row">
+                          <div class="col-md-8 mx-auto mb-4">
+                    
+                              <div class="view z-depth-1 rounded">
+                                <img class="rounded img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(29).jpg" alt="Video title">
+                                <div class="mask flex-center rgba-white-light">
+                                  <a id="play" class="btn-floating btn-danger btn-lg" data-toggle="modal" data-target="#modal1"><i class="fas fa-play"></i></a>
+                                </div>
+                              </div>
+                    
+                          </div>
+                        </div>
+                    
+                      </section>
+                      <!-- Section: Block Content -->
+                    
+                      
+                </div>
             `
         ) : null
         if (window.selected_video_component) {
