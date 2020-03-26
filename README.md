@@ -19,6 +19,7 @@ This project is a show case of what can be achieved using [Grapesjs](https://git
 - and few more coming soon...
 
 ## Multi Page Support
+You can define multiple pages for separate designs!
 
 ## Development
 
