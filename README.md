@@ -28,7 +28,7 @@ This feature makes it possible to define multiple pages for separate designs!
 Clone the repository
 
 ```sh
-$ git clone https://github.com/pouyamiralayi/assembekov-grapes.git
+$ git clone https://github.com/pouyamiralayi/showcase-grapes.git
 $ cd assembekov-grapes
 ```
 
