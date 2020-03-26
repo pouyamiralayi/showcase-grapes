@@ -1,4 +1,4 @@
-# Assembekov Grapes
+# ShowCase Grapes
 
 [DEMO](https://elastic-clarke-e20fec.netlify.com/)
 
