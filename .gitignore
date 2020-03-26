@@ -2,4 +2,3 @@
 private/
 node_modules/
 *.log
-/dist/
